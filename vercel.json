@@ -1,0 +1,32 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)\\.js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)\\.css",
+      "headers": [
+        { "key": "Content-Type", "value": "text/css" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/half-sleeve", "destination": "/half-sleeve.html" },
+    { "source": "/full-sleeve", "destination": "/full-sleeve.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/shipping-policy", "destination": "/shipping-policy.html" },
+    { "source": "/brazil-2026-kit", "destination": "/brazil-2026-kit.html" }
+  ]
+}
